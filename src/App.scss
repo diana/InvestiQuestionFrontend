@@ -1,0 +1,365 @@
+@import "./scss/colors";
+@import "./scss/reset";
+@import "./scss/scales";
+@import "./scss/typography";
+
+.header{
+  padding: 2rem;
+  background-color: $primary-color-gray1;
+}
+
+.nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Questrial', sans-serif;
+  font-size: 20pt;
+}
+
+button{
+  text-decoration: none;
+  color: $primary-color-blue4;
+  font-weight: 400;
+  font-size: 20pt;
+  font-family: 'Raleway', sans-serif;
+  padding: 5px;
+  border: 1.5pt solid $primary-color-gray3;
+  border-radius: 5%;
+  background-color: $primary-color-gray3;
+  opacity: 90%;
+}
+
+@media screen and (min-width:601px){
+  a{
+      font-size: 24pt;
+  }
+}
+@media screen and (max-width:600px){
+  a{
+      font-size: 10pt;
+  }
+}
+
+.logo{
+  width: 45%;
+}
+
+.body{
+  height: 1080px;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.welcome-background{
+  background-image: url('https://images.unsplash.com/photo-1427751840561-9852520f8ce8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2110&q=80');
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(3px);
+}
+
+.welcome-header{
+  font-family: 'Questrial', sans-serif;
+  color: $primary-color-black3;
+  padding-top: 2.5rem;
+  text-align: center;
+  font-weight: bold;
+  opacity: 1;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100%;
+}
+
+@media screen and (min-width:601px){
+  .welcome-header{
+      font-size: 52pt;
+  }
+}
+@media screen and (max-width:600px){
+  .welcome-header{
+      font-size: 28pt;
+  }
+}
+
+.welcome-page{
+  font-family: 'Raleway', sans-serif;
+  color: $primary-color-black3;
+  padding: 2.5rem;
+  text-align: center;
+  font-weight: 200;
+  opacity: none;
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  width: 100%;
+}
+
+@media screen and (min-width:601px){
+  .welcome-page{
+      font-size: 36pt;
+  }
+}
+@media screen and (max-width:600px){
+  .welcome-page{
+      font-size: 18pt;
+  }
+}
+
+.welcome-image{
+  width: 85%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 5rem;
+}
+
+.modal{
+ position: absolute;
+ top: 0%;
+ left: 25%;
+ z-index: 4;
+ border: solid $primary-color-black3;
+ margin: 5rem;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: $primary-color-gray4;
+ padding: 2rem;
+ padding-left: 7rem;
+ padding-right: 7rem;
+ border-radius: 2%;
+ opacity: 98%;
+ margin: 6rem;
+}
+
+.modal-content{
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  justify-content: center;
+}
+
+.close{
+  align-self: flex-start;
+  margin: 5px;
+  padding: 1px;
+  border-radius: 2px;
+}
+
+.login-form{
+  position: relative;
+  display: grid;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: $primary-color-blue2;
+  padding: 60px;
+  font-family: 'Questrial', sans-serif;
+}
+
+label{
+  padding: 2.5px;
+  font-size: 18pt;
+}
+
+input{
+  background-color: $primary-color-gray1;
+  margin: 4px;
+  padding: 5px;
+  font-size: 14pt;
+}
+
+.submit{
+  text-decoration: none;
+  color: $primary-color-blue4;
+  font-size: 14pt;
+  font-family: 'Raleway', sans-serif;
+  padding: 2px;
+  border: 1.5pt solid $primary-color-gray3;
+  border-radius: 5%;
+  background-color: $primary-color-gray3;
+}
+
+.login-button{
+  position: relative;
+  margin-top: 5pt;
+  width: 75%;
+  align-self: center;
+}
+
+.signup-background{
+  background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80');
+  height: 1080px;
+  opacity: 30%;
+}
+
+.signup-header{
+  position: absolute;
+  z-index: 1;
+  top: 20%;
+  font-family: 'Questrial', sans-serif;
+  color: $primary-color-blue6;
+  padding-top: 2.5rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 50pt;
+  width: 100%;
+  text-align: center;
+}
+
+.signup-form{
+  position: absolute;
+  top: 20%;
+  display: grid;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 60px;
+  font-family: 'Questrial', sans-serif;
+  width: 100%;
+  margin-top: 75px;
+}
+
+.signup-label{
+  padding: 2.5px;
+  font-size: 18pt;
+  margin-left: 4px;
+  color: $primary-color-blue6;
+  background-color: $primary-color-snow;
+  width: fit-content;
+}
+
+input{
+  background-color: $primary-color-gray1;
+  margin: 4px;
+  padding: 5px;
+  font-size: 14pt;
+}
+
+.submit{
+  text-decoration: none;
+  color: $primary-color-blue4;
+  font-size: 14pt;
+  font-family: 'Raleway', sans-serif;
+  padding: 2px;
+  border: 1.5pt solid $primary-color-gray3;
+  border-radius: 5%;
+  background-color: $primary-color-gray3;
+}
+
+.new-user-screen{
+  background-image: url('https://images.unsplash.com/photo-1501556466850-7c9fa1fccb4c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1301&q=80');
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(4px);
+  display: flex;
+}
+
+.user-page{
+  position: absolute;
+  z-index: 1;
+  top: 15%;
+  margin-left: 32px;
+}
+
+.new-survey{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.new-survey-message{
+  position: absolute;
+  z-index: 1;
+  top: 20%;
+  font-family: 'Questrial', sans-serif;
+  color: $primary-color-blue6;
+  padding-top: 2.5rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 50pt;
+  width: 100%;
+  text-align: left;
+  margin-left: 32px;
+}
+
+.new-survey-form{
+  position: absolute;
+  top: 30%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 75%;
+  backdrop-filter: blur(10px);
+  margin: 2%;
+}
+
+.survey-lable{
+  margin: 4px;
+  padding: 5px;
+  font-size: 22pt;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  color: $primary-color-blue5;
+  margin-left: 15%;
+  background-size: contain;
+  width: 20%;
+  text-align: right;
+  margin-top: 2%;
+}
+
+.survey-input{
+  background-color: $primary-color-gray3;
+  margin: 4px;
+  padding: 5px;
+  font-size: 18pt;
+  font-family: 'Raleway', sans-serif;
+  width: 50%;
+  margin-top: 2%;
+  color: $primary-color-green6;
+}
+
+.survey-submit{
+  text-decoration: none;
+  font-size: 16pt;
+  font-family: 'Raleway', sans-serif;
+  padding: 5px;
+  border: 1.5pt solid $primary-color-gray3;
+  border-radius: 5%;
+  background-color: $primary-color-gray3;
+  width: fit-content;
+  align-self: right;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  color: $primary-color-green4;
+}
+
+.new-survey-header{
+  color: $primary-color-green6;
+  position: absolute;
+  z-index: 1;
+  top: 20%;
+  font-family: 'Questrial', sans-serif;
+  font-weight: bold;
+  font-size: 50pt;
+  width: 100%;
+  text-align: center;
+  margin: 2%;
+  padding: 1%;
+  backdrop-filter: blur(10px);
+}
