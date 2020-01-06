@@ -14,6 +14,7 @@ export default class App extends Component {
     open: false,
     users: [],
     newUser: false,
+    user: false
   }
 
   componentDidMount(){
@@ -46,6 +47,12 @@ export default class App extends Component {
     this.setState({newUser: !this.state.newUser})
   }
   
+  isUsers = (event) => {
+    event.preventDefault()
+    this.setState({user: !this.state.user}) && this.onOpenModal()
+  }
+
+  
   setUser = user => {
     this.setState({users: [...this.state.users, user]})
   }
@@ -55,6 +62,7 @@ export default class App extends Component {
       <div>
         <NewUsers
           setUser={this.setUser}
+          isUsers={this.isUsers}
         />
       </div>
     )
@@ -95,11 +103,28 @@ export default class App extends Component {
   }
   }
 
+  logout = (event) => {
+      this.setState({isLoggedIn: false})
+  }
+
   userPage() {
     return(
       console.log('woop woop'),
       <UserPage />
     )
+  }
+
+  loginLogoutButton(){
+    if(this.state.isLoggedIn === true){
+      return(
+        <button onClick={this.logout}>logout</button>
+      )
+    }
+    else{
+      return(
+        <button onClick={this.onOpenModal}>login</button>
+      )
+    }
   }
 
 
@@ -108,9 +133,9 @@ export default class App extends Component {
       <div>
         <header className='header'>
           <nav className='nav'>
-            <button>home</button>
+            <button onClick={this.logout}>home</button>
             <img src='https://i.imgur.com/DD20Pye.png' alt='investi-questions' className='logo' />
-            <button onClick={this.onOpenModal}>login</button>
+            {this.loginLogoutButton()}
           </nav>
         </header>
         <div>

@@ -10,16 +10,6 @@ export default class NewUsers extends Component {
         password_error: false,
     }
 
-    createUser = user => {
-        this.props.setUser(user)
-        fetch('http://localhost:3000/users', {
-          method: 'POST',
-          headers: {
-            'Content-Type':'application/json'
-          },
-          body: JSON.stringify(user)
-        })
-    }
     
     handleChange(event){
         this.setState({[event.target.name] : event.target.value})
@@ -56,34 +46,40 @@ export default class NewUsers extends Component {
             this.state.password.length > 0 &&
             !this.state.password_error
         )
+        
         return(
-            console.log(this.props.createUser),
-            <div>
+            <div className='signup'>
                 <div className='signup-background'></div>
-                <h1 className='signup-header'>
-                    Sign-up today!
-                </h1>
-                <form className='signup-form' onSubmit={this.handleSubmit}>
-                    <label className='signup-label'>Username:</label>
-                    <input 
-                        name='username'
-                        type='text'
-                        onChange={event => this.handleChange(event)}
-                    />
-                    <label className='signup-label'>Email:</label>
-                    <input 
-                        type='text'
-                        name='email'
-                        onChange={event => this.handleChange(event)}
-                    />
-                    <label className='signup-label'>Password:</label>
-                    <input 
-                        type='password'
-                        name='password'
-                        onChange={event => this.handleChange(event)}
-                    />
-                     <input disabled={!isEnabled} className='signup-submit' type='submit'></input>
-                </form>
+                <div className='signup-no'>
+                    <h1 className='signup-header'>
+                        Sign-up today!
+                    </h1>
+                    <form className='signup-form' onSubmit={this.handleSubmit}>
+                        <label className='signup-label'>Username:</label>
+                        <input 
+                            name='username'
+                            type='text'
+                            onChange={event => this.handleChange(event)}
+                        />
+                        <label className='signup-label'>Email:</label>
+                        <input 
+                            type='text'
+                            name='email'
+                            onChange={event => this.handleChange(event)}
+                        />
+                        <label className='signup-label'>Password:</label>
+                        <input 
+                            type='password'
+                            name='password'
+                            onChange={event => this.handleChange(event)}
+                        />
+                        <input 
+                            disabled={!isEnabled}
+                            className='submit'
+                            type='submit'
+                        />
+                    </form>
+                </div>
             </div>
         )
     }

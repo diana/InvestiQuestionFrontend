@@ -30,24 +30,40 @@ export default class Login extends Component {
         return(
             <div className='modal'>
                 <div className='modal-content'>
-                <button onClick={this.props.onCloseModal} className='close'>x</button>
-                <form 
-                    className='login-form'
-                    
-                >
-                    <label>Email:</label>
-                    <input 
-                        type='text'
-                        name='email'
-                    />
-                    <label>Password:</label>
-                    <input 
-                        type='password'
-                        name='password'
-                    />
-                    <input type='submit' className='submit'onClick={this.loginUser}/>
-                </form>
-                <button onClick={this.props.isNewUsers} onClickCapture={this.props.onCloseModal} className='login-button'>Sign-Up</button>
+                    <button 
+                        onClick={this.props.onCloseModal} 
+                        className='close'
+                    >
+                        x
+                    </button>
+                    <form 
+                        className='login-form'
+                        
+                    >
+                        <label>Email:</label>
+                        <input 
+                            type='text'
+                            name='email'
+                        />
+                        <label>Password:</label>
+                        <input 
+                            type='password'
+                            name='password'
+                        />
+                        <input 
+                            type='submit' 
+                            className='submit'
+                            onClick={this.loginUser} 
+                            onClickCapture={this.props.onCloseModal}
+                        />
+                    </form>
+                    <button 
+                        onClick={this.props.isNewUsers} 
+                        onClickCapture={this.props.onCloseModal} 
+                        className='login-button'
+                    >
+                        Sign-Up
+                    </button>
                 </div>
             </div>
         )

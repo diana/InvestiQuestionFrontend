@@ -23,11 +23,12 @@ button{
   font-weight: 400;
   font-size: 20pt;
   font-family: 'Raleway', sans-serif;
-  padding: 5px;
+  padding: 1%;
   border: 1.5pt solid $primary-color-gray3;
   border-radius: 5%;
   background-color: $primary-color-gray3;
   opacity: 90%;
+  width: fit-content;
 }
 
 @media screen and (min-width:601px){
@@ -47,7 +48,6 @@ button{
 
 .body{
   height: 1080px;
-
 }
 
 * {
@@ -61,12 +61,15 @@ button{
   background-repeat: no-repeat;
   background-size: cover;
   filter: blur(3px);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 150%;
 }
 
 .welcome-header{
   font-family: 'Questrial', sans-serif;
   color: $primary-color-black3;
-  padding-top: 2.5rem;
+  padding: 1.75%;
   text-align: center;
   font-weight: bold;
   opacity: 1;
@@ -76,6 +79,8 @@ button{
   transform: translate(-50%, -50%);
   z-index: 2;
   width: 100%;
+  background-color: $primary-color-gray5;
+  opacity: 90%;
 }
 
 @media screen and (min-width:601px){
@@ -92,7 +97,7 @@ button{
 .welcome-page{
   font-family: 'Raleway', sans-serif;
   color: $primary-color-black3;
-  padding: 2.5rem;
+  padding: 2%;
   text-align: center;
   font-weight: 200;
   opacity: none;
@@ -102,6 +107,8 @@ button{
   transform: translate(-50%, -50%);
   z-index: 3;
   width: 100%;
+  background-color: $primary-color-gray5;
+  opacity: 90%;
 }
 
 @media screen and (min-width:601px){
@@ -192,34 +199,34 @@ input{
 
 .login-button{
   position: relative;
-  margin-top: 5pt;
-  width: 75%;
+  width: fit-content;
   align-self: center;
+  margin: 5%;
 }
 
 .signup-background{
   background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80');
   height: 1080px;
   opacity: 30%;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .signup-header{
   position: absolute;
-  z-index: 1;
-  top: 20%;
   font-family: 'Questrial', sans-serif;
   color: $primary-color-blue6;
-  padding-top: 2.5rem;
   text-align: center;
   font-weight: bold;
   font-size: 50pt;
   width: 100%;
   text-align: center;
+  margin: 2%;
 }
 
 .signup-form{
   position: absolute;
-  top: 20%;
+  top: 35%;
   display: grid;
   flex-direction: row;
   flex-wrap: wrap;
@@ -227,7 +234,6 @@ input{
   padding: 60px;
   font-family: 'Questrial', sans-serif;
   width: 100%;
-  margin-top: 75px;
 }
 
 .signup-label{
@@ -259,52 +265,56 @@ input{
 
 .new-user-screen{
   background-image: url('https://images.unsplash.com/photo-1501556466850-7c9fa1fccb4c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1301&q=80');
-  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   filter: blur(4px);
   display: flex;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 150%;
 }
 
 .user-page{
   position: absolute;
   z-index: 1;
-  top: 15%;
+  top: 30%;
   margin-left: 32px;
+  width: 100%;
+}
+
+.new-survey-button{
+  width: fit-content;
 }
 
 .new-survey{
   width: 100%;
-  display: flex;
-  flex-direction: row;
 }
 
 .new-survey-message{
-  position: absolute;
   z-index: 1;
-  top: 20%;
   font-family: 'Questrial', sans-serif;
   color: $primary-color-blue6;
-  padding-top: 2.5rem;
   text-align: center;
   font-weight: bold;
   font-size: 50pt;
-  width: 100%;
-  text-align: left;
-  margin-left: 32px;
+  width: 90%;
+  background-color: $primary-color-gray3;
+  margin: 2%;
+  padding: 2%;
+  opacity: 90%;
 }
 
 .new-survey-form{
-  position: absolute;
   top: 30%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: right;
   width: 75%;
   backdrop-filter: blur(10px);
   margin: 2%;
+  align-content: center;
 }
 
 .survey-lable{
@@ -351,15 +361,323 @@ input{
 
 .new-survey-header{
   color: $primary-color-green6;
-  position: absolute;
   z-index: 1;
   top: 20%;
   font-family: 'Questrial', sans-serif;
   font-weight: bold;
   font-size: 50pt;
   width: 100%;
-  text-align: center;
-  margin: 2%;
-  padding: 1%;
+  text-align: left;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding-top: 1%;
+  padding-bottom: 1%;
   backdrop-filter: blur(10px);
+}
+
+.surveys-body{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: center;
+  background-color:$primary-color-gray3;
+  padding: 2%;
+  margin-top: 2%;
+  width: 90%;
+  opacity: 90%;
+}
+
+.user-survey-message{
+  z-index: 1;
+  top: 20%;
+  font-family: 'Questrial', sans-serif;
+  color: $primary-color-blue6;
+  padding-top: 2.5rem;
+  font-weight: bold;
+  font-size: 50pt;
+  width: 100%;
+  margin-left: 32px;
+}
+.user-surveys{
+  width:100%
+}
+
+.survey-table{
+  width: fit-content;
+  margin: 32pt;
+  border-radius: 2;
+}
+
+tr{
+  width: fit-content;
+}
+
+th{
+  text-align: left;
+  font-family: 'Questrial', sans-serif;
+  font-weight: 900;
+  font-size: 22pt;
+  border: solid;
+  border-width: 3px;
+  width: fit-content;
+  background-color: $primary-color-blue6;
+  padding: 5px;
+  color: $primary-color-gray3;
+  border-color: $primary-color-black5;
+
+}
+
+td{
+  text-align: left;
+  font-family: 'Raleway', sans-serif;
+  font-size: 22pt;
+  border: solid;
+  border-width: 3px;
+  width: fit-content;
+  padding: 5px;
+  text-align: center;
+  background-color: $primary-color-gray3;
+  color: $primary-color-blue6;
+  border-color: $primary-color-black5;
+}
+
+.edit-button{
+  text-decoration: none;
+  color: $primary-color-black5;
+  font-weight: 400;
+  font-size: 18pt;
+  font-family: 'Raleway', sans-serif;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid $primary-color-green4;
+  border-radius: 5%;
+  background-color: $primary-color-green4;
+  opacity: 85%;
+}
+
+.survey-body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:$primary-color-gray5;
+  padding: 2%;
+  margin-top: 2%;
+  width: 90%;
+  opacity: 90%;
+}
+
+.description{
+  text-align: left;
+  font-family: 'Raleway', sans-serif;
+  font-size: 32pt;
+  width: fit-content;
+  color: $primary-color-green7;
+  margin-left: 5%;
+  width: 100%;
+  padding: 2%;
+}
+
+.survey-title{
+  z-index: 1;
+  font-family: 'Questrial', sans-serif;
+  color: $primary-color-blue6;
+  font-weight: bold;
+  font-size: 50pt;
+  width: 100%;
+  padding: 2%;
+  text-decoration: underline;
+}
+
+.question-message{
+  text-align: left;
+  font-family: 'Questrial', sans-serif;
+  font-size: 24pt;
+  width: fit-content;
+  padding: 5px;
+  text-align: center;
+  color: $primary-color-blue5;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+select{
+  font-family: 'Raleway', sans-serif;
+  font-size: 18pt;
+  background-color: $primary-color-gray3;
+  border-color: $primary-color-gray3;
+  border-width: 5px;
+  padding: 5px;
+}
+
+.question-form{
+  display: grid;
+  backdrop-filter: blur(10px);
+  align-content: center;
+  margin-top: 5%;
+}
+
+.q-label{
+  font-family: 'Questrial', sans-serif;
+  font-size: 22pt;
+  font-weight: bold;
+}
+
+.q-input{
+  font-family: 'Questrial', sans-serif;
+  font-size: 22pt;
+}
+
+.s-label{
+  font-family: 'Raleway', sans-serif;
+
+}
+
+.s-input{
+  font-family: 'Raleway', sans-serif;
+}
+
+.q-button{
+  text-decoration: none;
+  color: $primary-color-blue4;
+  font-weight: 400;
+  font-size: 18pt;
+  font-family: 'Raleway', sans-serif;
+  padding: 5px;
+  border: 1.5pt solid $primary-color-gray3;
+  border-radius: 5%;
+  background-color: $primary-color-gray3;
+  opacity: 90%;
+  width: fit-content;
+  justify-self: left;
+}
+
+.q-submit{
+  text-decoration: none;
+  color: $primary-color-gray7;
+  font-weight: 400;
+  font-size: 18pt;
+  font-family: 'Raleway', sans-serif;
+  padding: 5px;
+  border: 1.5pt solid $primary-color-green4;
+  border-radius: 5%;
+  background-color: $primary-color-green4;
+  opacity: 90%;
+  width: fit-content;
+  justify-self: center;
+
+}
+
+.question{
+  text-align: left;
+  font-family: 'Raleway', sans-serif;
+  font-size: 24pt;
+  width: fit-content;
+  padding: 5px;
+  color: $primary-color-green4;
+  margin-left: 10%;
+  width: 100%;
+
+}
+
+.q-dd{
+  font-family: 'Raleway', sans-serif;
+  font-size: 14pt;
+  background-color: $primary-color-gray3;
+  border-color: $primary-color-gray3;
+  padding: 5px;
+  margin-left: 15%;
+  color: $primary-color-black4;
+}
+
+// div{
+//   backdrop-filter: blur(10px);
+// }
+
+.cb{
+  display: flex;
+  flex-direction: row;
+  margin-left: 15%;
+  backdrop-filter: blur(10px);
+}
+
+.choices{
+  text-align: left;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18pt;
+  width: fit-content;
+  padding: 5px;
+  color: $primary-color-green4;
+  width: 100%;
+  backdrop-filter: blur(10px);
+
+}
+
+textarea{
+  background-color: $primary-color-gray3;
+  margin-left: 15%;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16pt;
+  border-radius: 5%;
+  border-style: inset;
+  backdrop-filter: blur(10px);
+  
+}
+
+.sl-input{
+  font-family: 'Raleway', sans-serif;
+  font-size: 16pt;
+  background-color: $primary-color-gray3;
+  margin-left: 15%;
+  margin-right: 15%;
+  border-radius: 5%;
+  backdrop-filter: blur(10px);
+
+}
+
+.survey{
+  background-color: $primary-color-gray2;
+  margin: 2%;
+  opacity: 95%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+}
+
+.q-container{
+  background-color: $primary-color-blue6;
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  margin: 2%;
+  padding: 2%;
+}
+
+.q-div{
+  border-radius: 1%;
+  width: 30%;
+  margin: 1%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.signup{
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+}
+
+.signup-no{
+  height: 0;
+  align-items: center;
+}
+
+.user-button{
+  width: fit-content;
+  margin: 5%;
 }
